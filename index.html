@@ -1,0 +1,40 @@
+
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><link rel="icon" href="data:">
+<title>kana2mn</title>
+</head>
+<bdoy>
+<h1>kana2mn</h1>
+<input type=text id=insrc><br>
+<input type=text id=indst>
+<div class=credit>
+<a href=https://github.com/code4fukui/kana2mn/>src on GitHub</a><br>
+</div>
+
+<style>
+body {
+	text-align: center;
+  font-family: sans-serif;
+}
+input {
+	margin: 1em 0.5em;
+	padding: 0.5em;
+	font-size: 130%;
+	width: 80%;
+}
+.credit {
+	margin: 1em;
+}
+a {
+	color: gray !important;
+}
+</style>
+
+<script type="module">
+import { kana2mn } from "./kana2mn.js";
+
+insrc.onkeyup = () => {
+  indst.value = kana2mn(insrc.value);
+};
+</script>
+</body>
+</html>
